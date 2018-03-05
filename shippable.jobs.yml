@@ -1,6 +1,7 @@
 jobs:
   - name: x86-64-ubuntu-container-shipctl
     type: runSh
+    allowPublicAccess: true
     steps:
       - IN: box-nginx-1
       - TASK:
@@ -9,6 +10,7 @@ jobs:
 
   - name: x86-64-ubuntu-container-shipctl-2
     type: runSh
+    allowPublicAccess: true
     steps:
       - IN: box-nginx-2
       - TASK:
