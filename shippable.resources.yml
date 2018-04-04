@@ -13,14 +13,14 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: "Riturajcse/sample_php"
+      sourceName: "ritutajTest/sample_php"
       branch: master
       
   - name: gitRepo-resource-1
     type: gitRepo
     integration: github
     pointer:
-      sourceName: "Riturajcse/sample_nodejs"
+      sourceName: "ritutajTest/sample_nodejs"
       branch: master
       
   - name: kubeCluster
