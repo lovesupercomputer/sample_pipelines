@@ -16,7 +16,7 @@ jobs:
     steps:
       - OUT: gitRepo-resource-1
         replicate: sample_nodejs_ciRepo
-        replicateOnPullRequest: true
+        replicateOnPullRequest: false
         
   - name: sample_nodejs_runSh
     type: runSh
