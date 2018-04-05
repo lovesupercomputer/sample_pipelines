@@ -26,7 +26,7 @@ jobs:
         - script: echo "hello world"
       - OUT: gitRepo-resource-2
         replicate: gitRepo-resource-1
-        replicateOnPullRequest: true
+        replicateOnPullRequest: false
         
   - name: deploy_gitRepo
     type: deploy
