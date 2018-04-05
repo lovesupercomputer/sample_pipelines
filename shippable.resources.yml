@@ -23,7 +23,7 @@ resources:
       sourceName: "ritutajTest/sample_nodejs"
       branch: master
       #buildOnCommit: true
-      #buildOnPullRequest: true
+      buildOnPullRequest: true
       #buildOnPullRequestClose: true
       #buildOnRelease: true
       #buildOnTagPush: true
