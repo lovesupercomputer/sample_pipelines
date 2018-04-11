@@ -4,26 +4,34 @@ jobs:
     steps:
       - IN: box-nginx-1-1
         
-  - name: runSh-job
+  - name: runSh-job-array
     type: runSh
+    on_start:
+      - script: echo "Hello from on_start array"
     steps:
       - IN: gitRepo-resource
         showBuildStatus: true
       - IN: rituraj-1-1
       - TASK:
         - script: echo 'start runSh hello'
-        - script: printenv
+        - script: printenv32
     on_success:
-      - script: echo "Hello from on_success"
+      - script: echo "Hello from on_success array n"
+    on_cancel:
+      - script: echo "Hello from on_cancel array"
     on_failure:
       - script: echo "Hello from on_failure"
       - script: echo ":("
     always:
-      - script: echo "Hello from always"
+      - script: echo "Hello from always n"
       - script: echo ":|"
       
-  - name: runSh-job-2
+  - name: runSh-job-obj
     type: runSh
+    on_start:
+      script:
+        - echo "hello START"
+        - echo ":)"
     steps:
       - IN: gitRepo-resource
         showBuildStatus: true
@@ -31,4 +39,19 @@ jobs:
       - TASK:
         - script: echo 'start runSh hello 2'
         - script: printenv
-        
+    on_success:
+      script:
+        - echo "hello SUCCESS n"
+        - echo ":)"
+    on_cancel:
+      script:
+        - echo "hello CANCEL"
+        - echo ":)"
+    on_failure:
+      script:
+        - echo "hello FAILURE"
+        - echo ":("
+    always:
+      script:
+        - echo "hello ALWAYS n"
+        - echo ":|"
