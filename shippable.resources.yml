@@ -13,7 +13,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: "ritutajTest/sample_php"
+      sourceName: "lovesupercomputer/sample_nodejs"
       branch: master
       
   - name: email
